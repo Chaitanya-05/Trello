@@ -1,6 +1,6 @@
 body{
     margin: 0px;
-    
+
 }
 .boardcard{
     width: 200px;
@@ -12,7 +12,8 @@ body{
     background-size: cover;
 }
 .boardCont{
-    margin: 0px 200px ;
+    width: 1000px;
+    margin: auto;
 
     display: grid;
     grid-template-columns: auto auto auto auto;
