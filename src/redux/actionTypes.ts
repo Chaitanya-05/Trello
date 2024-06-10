@@ -1,0 +1,5 @@
+export const AUTH:string="AUTH"
+export const BOARD:string="BOARD"
+// export const AUTH:string="AUTH"
+// export const AUTH:string="AUTH"
+// export const AUTH:string="AUTH"

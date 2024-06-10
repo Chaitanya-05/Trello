@@ -1,3 +1,5 @@
 import { legacy_createStore } from "redux";
+import { initialState } from "./initialState";
+import { reducer } from "./reducer";
 
-const store = legacy_createStore(reducer,initialState)
+export const store = legacy_createStore(reducer,initialState)
