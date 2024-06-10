@@ -1,7 +1,10 @@
-interface State_interface {
 
+export interface StateInterface {
+    boards: any[];
+    curBoard: any;
 }
 
-export const initialState:State_interface= {
-
-}
+export const initialState: StateInterface = {
+    boards: [],
+    curBoard: null
+};

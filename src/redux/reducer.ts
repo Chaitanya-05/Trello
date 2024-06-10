@@ -1,19 +1,19 @@
-import { AUTH } from "./actionTypes";
-import { initialState } from "./initialState";
+import { BOARDS, DASH } from './actionTypes';
+import { initialState, StateInterface } from './initialState';
 
-interface action {
-    type:string;
-    action:any;
-
-}
-
-export const reducer=(state=initialState,action:action)=>{
-switch (action.type) {
-    case AUTH:
-        
-        break;
-
-    default:
-        return state;
-}
-}
+export const reducer = (state = initialState, action: any): StateInterface => {
+    switch (action.type) {
+        case BOARDS:
+            return {
+                ...state,
+                boards: action.payload,
+            };
+        case DASH:
+            return {
+                ...state,
+                curBoard: action.payload,
+            };
+        default:
+            return state;
+    }
+};

@@ -1,5 +1,6 @@
-export const AUTH:string="AUTH"
+export const DASH:string="DASH"
+export const BOARDS:string="BOARDS"
 export const BOARD:string="BOARD"
-// export const AUTH:string="AUTH"
+export const AUTH:string="AUTH"
 // export const AUTH:string="AUTH"
 // export const AUTH:string="AUTH"
