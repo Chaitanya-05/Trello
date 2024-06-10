@@ -1,29 +1,23 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchBoards, setCurBoard } from './redux/actions';
-import { AppState } from './redux/store';
-import { Board } from './pages/Board';
-import { DashBoard } from './pages/DashBoard';
+import { useDispatch, useSelector } from "react-redux";
+import { BOARD, BOARDS, DASH } from "./redux/actionTypes";
+
+import { DashBoard } from "./pages/DashBoard";
+import { Board } from "./pages/Board";
+import { StateInterface } from "./redux/initialState";
+
 
 function App() {
-    const dispatch = useDispatch();
-    const curBoard = useSelector((state: AppState) => state.app.curBoard);
-
-    useEffect(() => {
-        dispatch(fetchBoards());
-    }, [dispatch]);
-
-    function handleClick(){
-      dispatch(setCurBoard("null"))
+  const dispatch =useDispatch();
+  const curBoard = useSelector((state:StateInterface)=>state.curBoard)
+  console.log(curBoard); 
+  return (
+  <>
+  <nav><button onClick={()=>dispatch({type:DASH,payload:null})}>DashBoard</button></nav>
+    {
+    curBoard?(<Board/>):(<DashBoard/>)
     }
-    return (
-        <>
-            <nav>
-                <button onClick={handleClick}>DashBoard</button>
-                </nav>
-            {curBoard ? <Board /> : <DashBoard />}
-        </>
-    );
+  </>
+  );
 }
 
 export default App;

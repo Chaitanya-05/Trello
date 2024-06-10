@@ -1,0 +1,31 @@
+body{
+    margin: 0px;
+    
+}
+.boardcard{
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+    background-size: cover;
+}
+.boardCont{
+    margin: 0px 200px ;
+
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap:30px
+}
+nav{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(193, 193, 193);
+}
+nav>button{
+    border: 0px;
+    padding: 10px;
+    border-radius: 10px;
+}
